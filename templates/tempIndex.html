@@ -1,0 +1,14 @@
+<div align = "center" style = "margin: 20px; border: solid 20px;background: #b7f2f7; padding: 250px;">
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+     {{ form.as_p }}
+    <button type="submit">Upload</button>
+  </form>
+  
+  {% if img_obj %}
+    <h3>Succesfully uploaded : {{img_obj.title}}</h3>
+    <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
+    <h3>{{ output }}</h3?
+  {% endif %}
+
+    </div>
